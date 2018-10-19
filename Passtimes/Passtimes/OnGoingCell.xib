@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OnGoingCollectionViewCell" customModule="Passtimes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQR-gi-T0I" userLabel="CardVIew">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gef-pc-yb0" userLabel="title">
+                            <rect key="frame" x="16" y="26" width="51" height="34"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <color key="textColor" red="0.1335134208" green="0.1290535629" blue="0.1450878978" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ore-oA-nT3">
+                            <rect key="frame" x="16" y="65" width="343" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.1335134208" green="0.1290535629" blue="0.1450878978" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJk-y7-Bjx">
+                            <rect key="frame" x="16" y="85" width="343" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.1335134208" green="0.1290535629" blue="0.1450878978" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUj-nv-Geh">
+                            <rect key="frame" x="330" y="0.0" width="45" height="45"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDO-9x-3dl" userLabel="day">
+                                    <rect key="frame" x="0.0" y="18.5" width="45" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                    <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQI-Oz-it7" userLabel="month">
+                                    <rect key="frame" x="0.0" y="8.5" width="45" height="10"/>
+                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="8"/>
+                                    <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="vQI-Oz-it7" firstAttribute="leading" secondItem="NUj-nv-Geh" secondAttribute="leading" id="Gmm-aq-cjA"/>
+                                <constraint firstItem="VDO-9x-3dl" firstAttribute="centerX" secondItem="NUj-nv-Geh" secondAttribute="centerX" id="HIn-CG-jXm"/>
+                                <constraint firstAttribute="trailing" secondItem="VDO-9x-3dl" secondAttribute="trailing" id="REE-kr-DfQ"/>
+                                <constraint firstItem="VDO-9x-3dl" firstAttribute="leading" secondItem="NUj-nv-Geh" secondAttribute="leading" id="Uk3-cK-dcb"/>
+                                <constraint firstItem="VDO-9x-3dl" firstAttribute="centerY" secondItem="NUj-nv-Geh" secondAttribute="centerY" multiplier="1.2" id="Xdx-PK-gzg"/>
+                                <constraint firstAttribute="trailing" secondItem="vQI-Oz-it7" secondAttribute="trailing" id="jC0-8S-OaQ"/>
+                                <constraint firstAttribute="width" constant="45" id="lDO-Lu-Sh9"/>
+                                <constraint firstItem="VDO-9x-3dl" firstAttribute="top" secondItem="vQI-Oz-it7" secondAttribute="bottom" id="ngE-Lx-r37"/>
+                                <constraint firstAttribute="height" constant="45" id="xKl-Jc-jY7"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJI-nA-1YP">
+                            <rect key="frame" x="16" y="11" width="32.5" height="15"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <color key="textColor" red="0.13351342082023621" green="0.12905356287956238" blue="0.14508789777755737" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NUj-nv-Geh" secondAttribute="trailing" id="0Ph-5g-V7g"/>
+                        <constraint firstItem="bJk-y7-Bjx" firstAttribute="top" secondItem="ore-oA-nT3" secondAttribute="bottom" id="1Jc-8x-MBf"/>
+                        <constraint firstItem="fJI-nA-1YP" firstAttribute="top" secondItem="CQR-gi-T0I" secondAttribute="top" constant="11" id="40Z-qc-JSH"/>
+                        <constraint firstAttribute="trailing" secondItem="ore-oA-nT3" secondAttribute="trailing" constant="16" id="8My-6i-u0M"/>
+                        <constraint firstItem="ore-oA-nT3" firstAttribute="leading" secondItem="CQR-gi-T0I" secondAttribute="leading" constant="16" id="DKL-QQ-yL8"/>
+                        <constraint firstItem="gef-pc-yb0" firstAttribute="leading" secondItem="CQR-gi-T0I" secondAttribute="leading" constant="16" id="DwP-Kj-tgr"/>
+                        <constraint firstItem="fJI-nA-1YP" firstAttribute="leading" secondItem="CQR-gi-T0I" secondAttribute="leading" constant="16" id="FaL-ue-aVC"/>
+                        <constraint firstItem="NUj-nv-Geh" firstAttribute="top" secondItem="CQR-gi-T0I" secondAttribute="top" id="JZj-Wq-Plz"/>
+                        <constraint firstItem="bJk-y7-Bjx" firstAttribute="leading" secondItem="CQR-gi-T0I" secondAttribute="leading" constant="16" id="YKR-1h-tG4"/>
+                        <constraint firstItem="NUj-nv-Geh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gef-pc-yb0" secondAttribute="trailing" id="ZeA-Fs-RHK"/>
+                        <constraint firstItem="NUj-nv-Geh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fJI-nA-1YP" secondAttribute="trailing" id="cFl-RN-4Ah"/>
+                        <constraint firstAttribute="trailing" secondItem="bJk-y7-Bjx" secondAttribute="trailing" constant="16" id="k9q-I1-H6d"/>
+                        <constraint firstItem="gef-pc-yb0" firstAttribute="top" secondItem="fJI-nA-1YP" secondAttribute="bottom" id="uVN-XG-YAL"/>
+                        <constraint firstAttribute="bottom" secondItem="bJk-y7-Bjx" secondAttribute="bottom" constant="10" id="vaG-XS-m5k"/>
+                        <constraint firstItem="ore-oA-nT3" firstAttribute="top" secondItem="gef-pc-yb0" secondAttribute="bottom" constant="5" id="zdx-yI-VNE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CQR-gi-T0I" secondAttribute="trailing" id="3HR-Sa-jbe"/>
+                <constraint firstItem="CQR-gi-T0I" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Hqv-cQ-hmY"/>
+                <constraint firstItem="CQR-gi-T0I" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="g07-GS-dQs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CQR-gi-T0I" secondAttribute="bottom" id="kOj-N9-85f"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="cardView" destination="CQR-gi-T0I" id="OAD-aa-4sL"/>
+                <outlet property="cornerView" destination="NUj-nv-Geh" id="PoT-Vt-JeJ"/>
+                <outlet property="day" destination="VDO-9x-3dl" id="rLg-L6-SBv"/>
+                <outlet property="location" destination="ore-oA-nT3" id="eBr-09-SCt"/>
+                <outlet property="month" destination="vQI-Oz-it7" id="RoS-8d-VbO"/>
+                <outlet property="sport" destination="fJI-nA-1YP" id="iVb-qw-Opx"/>
+                <outlet property="time" destination="bJk-y7-Bjx" id="9hv-Yc-mSB"/>
+                <outlet property="title" destination="gef-pc-yb0" id="00f-e8-T9g"/>
+            </connections>
+            <point key="canvasLocation" x="53.600000000000001" y="35.082458770614693"/>
+        </view>
+    </objects>
+</document>
