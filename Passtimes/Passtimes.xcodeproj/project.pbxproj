@@ -21,6 +21,12 @@
 		DF04FD5A2179FE1F004ED984 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF04FD592179FE1F004ED984 /* Player.swift */; };
 		DF04FD5C217A0803004ED984 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF04FD5B217A0803004ED984 /* Profile.storyboard */; };
 		DF04FD5E217A0815004ED984 /* ProfileVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF04FD5D217A0815004ED984 /* ProfileVIewController.swift */; };
+		FBB98FEF217A1D8000DB9803 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB98FE62179FA7000DB9803 /* FeedViewController.swift */; };
+		FBB98FF0217A1D8400DB9803 /* OnGoingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB98FE02179F2DE00DB9803 /* OnGoingCollectionViewCell.swift */; };
+		FBB98FF1217A1D9900DB9803 /* DatabaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB98FE9217A060C00DB9803 /* DatabaseUtils.swift */; };
+		FBB98FF2217A1D9C00DB9803 /* CalendarUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB98FE42179F78000DB9803 /* CalendarUtils.swift */; };
+		FBB98FF3217A1D9F00DB9803 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB98FE22179F39900DB9803 /* Event.swift */; };
+		FBB98FF5217A1FFB00DB9803 /* TabManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB98FF4217A1FFB00DB9803 /* TabManager.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,13 +48,13 @@
 		DF04FD5B217A0803004ED984 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		DF04FD5D217A0815004ED984 /* ProfileVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVIewController.swift; sourceTree = "<group>"; };
 		F0C4FCF4F99EACFE94955B67 /* Pods_Passtimes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Passtimes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBB98FDA2179E6A100DB9803 /* TabManager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabManager.storyboard; sourceTree = "<group>"; };
 		FBB98FDE2179EB9F00DB9803 /* OnGoingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnGoingCell.xib; sourceTree = "<group>"; };
 		FBB98FE02179F2DE00DB9803 /* OnGoingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnGoingCollectionViewCell.swift; sourceTree = "<group>"; };
 		FBB98FE22179F39900DB9803 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		FBB98FE42179F78000DB9803 /* CalendarUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUtils.swift; sourceTree = "<group>"; };
 		FBB98FE62179FA7000DB9803 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FBB98FE9217A060C00DB9803 /* DatabaseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUtils.swift; sourceTree = "<group>"; };
+		FBB98FF4217A1FFB00DB9803 /* TabManager.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabManager.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,23 +110,19 @@
 				DF04FD392179E2DE004ED984 /* AppDelegate.swift */,
 				DF04FD3B2179E2DE004ED984 /* LoginViewController.swift */,
 				DF04FD4D2179E674004ED984 /* kitten_swash.ttf */,
+				FBB98FF4217A1FFB00DB9803 /* TabManager.storyboard */,
 				DF04FD4B2179E362004ED984 /* GoogleService-Info.plist */,
 				DF04FD3D2179E2DE004ED984 /* Login.storyboard */,
-				FBB98FDA2179E6A100DB9803 /* TabManager.storyboard */,
 				FBB98FE62179FA7000DB9803 /* FeedViewController.swift */,
 				FBB98FE02179F2DE00DB9803 /* OnGoingCollectionViewCell.swift */,
+				DF04FD5D217A0815004ED984 /* ProfileVIewController.swift */,
 				FBB98FDE2179EB9F00DB9803 /* OnGoingCell.xib */,
 				FBB98FE8217A05E700DB9803 /* Utils */,
 				FBB98FEB217A097E00DB9803 /* Models */,
 				DF04FD402179E2DF004ED984 /* Assets.xcassets */,
 				DF04FD422179E2DF004ED984 /* LaunchScreen.storyboard */,
 				DF04FD452179E2DF004ED984 /* Info.plist */,
-				DF04FD4F2179E976004ED984 /* AuthUtils.swift */,
-				DF04FD552179F4FE004ED984 /* ButtonUtils.swift */,
-				DF04FD572179FC84004ED984 /* SnackBarUtils.swift */,
-				DF04FD592179FE1F004ED984 /* Player.swift */,
 				DF04FD5B217A0803004ED984 /* Profile.storyboard */,
-				DF04FD5D217A0815004ED984 /* ProfileVIewController.swift */,
 			);
 			path = Passtimes;
 			sourceTree = "<group>";
@@ -130,6 +132,9 @@
 			children = (
 				FBB98FE42179F78000DB9803 /* CalendarUtils.swift */,
 				FBB98FE9217A060C00DB9803 /* DatabaseUtils.swift */,
+				DF04FD4F2179E976004ED984 /* AuthUtils.swift */,
+				DF04FD552179F4FE004ED984 /* ButtonUtils.swift */,
+				DF04FD572179FC84004ED984 /* SnackBarUtils.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 		FBB98FEB217A097E00DB9803 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DF04FD592179FE1F004ED984 /* Player.swift */,
 				FBB98FE22179F39900DB9803 /* Event.swift */,
 			);
 			name = Models;
@@ -207,8 +213,8 @@
 				DF04FD4E2179E674004ED984 /* kitten_swash.ttf in Resources */,
 				DF04FD4C2179E362004ED984 /* GoogleService-Info.plist in Resources */,
 				DF04FD412179E2DF004ED984 /* Assets.xcassets in Resources */,
-				FBB98FDB2179E6A100DB9803 /* TabManager.storyboard in Resources */,
 				DF04FD3F2179E2DE004ED984 /* Login.storyboard in Resources */,
+				FBB98FF5217A1FFB00DB9803 /* TabManager.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +282,15 @@
 			files = (
 				DF04FD582179FC84004ED984 /* SnackBarUtils.swift in Sources */,
 				DF04FD3C2179E2DE004ED984 /* LoginViewController.swift in Sources */,
+				FBB98FF2217A1D9C00DB9803 /* CalendarUtils.swift in Sources */,
 				DF04FD562179F4FE004ED984 /* ButtonUtils.swift in Sources */,
+				FBB98FF3217A1D9F00DB9803 /* Event.swift in Sources */,
 				DF04FD502179E976004ED984 /* AuthUtils.swift in Sources */,
 				DF04FD5A2179FE1F004ED984 /* Player.swift in Sources */,
 				DF04FD5E217A0815004ED984 /* ProfileVIewController.swift in Sources */,
+				FBB98FF1217A1D9900DB9803 /* DatabaseUtils.swift in Sources */,
+				FBB98FEF217A1D8000DB9803 /* FeedViewController.swift in Sources */,
+				FBB98FF0217A1D8400DB9803 /* OnGoingCollectionViewCell.swift in Sources */,
 				DF04FD3A2179E2DE004ED984 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

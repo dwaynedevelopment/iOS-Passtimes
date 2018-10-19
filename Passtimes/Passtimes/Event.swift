@@ -8,21 +8,38 @@
 
 import Foundation
 
-class Event: NSObject {
+enum ParsingError: Error {
+    case Event
+}
 
-    var id: String?
-    var hostId: String?
-    var hostThumbnail: String?
-    var sport: String?
-    var title: String?
-    var latitude: Double?
-    var longitude: Double?
-    var location: String?
-    var startDate: CLong?
-    var endDate: CLong?
-    var maxPlayers: Int?
+class Event {
 
-//    init(id: String, hostId: String, hostThumbnail: String, sport: String, title:String, latitude: Double, longitude: Double, location: String, startDate: Int, endDate: Int, maxPlayers: Int) {
+    let id: String
+    let hostId: String
+    let hostThumbnail: String
+    let sport: String
+    let title: String
+    let latitude: Double
+    let longitude: Double
+    let location: String
+    let startDate: Int
+    let endDate: Int
+    let maxPlayers: Int
+
+//    init(dictionary: [String: Any]) throws {
+//        guard let id = dictionary["id"] as? String,
+//            let hostId = dictionary["hostId"] as? String,
+//            let hostThumbnail = dictionary["hostThumbnail"] as? String,
+//            let sport = dictionary["sport"] as? String,
+//            let title = dictionary["title"] as? String,
+//            let latitude = dictionary["latitude"] as? Double,
+//            let longitude = dictionary["longitude"] as? Double,
+//            let location = dictionary["location"] as? String,
+//            let startDate = dictionary["startDate"] as? Int,
+//            let endDate = dictionary["endDate"] as? Int,
+//            let maxPlayers = dictionary["maxPlayers"] as? Int
+//            else { throw ParsingError.Event }
+//
 //        self.id = id
 //        self.hostId = hostId
 //        self.hostThumbnail = hostThumbnail
@@ -35,6 +52,20 @@ class Event: NSObject {
 //        self.endDate = endDate
 //        self.maxPlayers = maxPlayers
 //    }
+
+    init(id: String, hostId: String, hostThumbnail: String, sport: String, title:String, latitude: Double, longitude: Double, location: String, startDate: Int, endDate: Int, maxPlayers: Int) {
+        self.id = id
+        self.hostId = hostId
+        self.hostThumbnail = hostThumbnail
+        self.sport = sport
+        self.title = title
+        self.latitude = latitude
+        self.longitude = longitude
+        self.location = location
+        self.startDate = startDate
+        self.endDate = endDate
+        self.maxPlayers = maxPlayers
+    }
 
 
 // THIS MIGHT GIVE PROBLEM

@@ -12,6 +12,7 @@ import FirebaseDatabase
 class FeedViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let cellIdentifier: String = "cellIdentifier"
+
     @IBOutlet var onGoingCollectionView: UICollectionView!
 
     var db: DatabaseUtils!
@@ -21,7 +22,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.onGoingCollectionView.register(UINib(nibName: "OnGoingCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        //self.onGoingCollectionView.register(UINib(nibName: "OnGoingCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         // Do any additional setup after loading the view.
 
         db = DatabaseUtils.sharedInstance
@@ -29,13 +30,25 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
             self.events.removeAll()
 
             for event in snapshot.children.allObjects as! [DataSnapshot] {
-                if let dictionary = event.value as? [String: Any] {
-                    print(dictionary)
-                    //let e = Event()
 
-                    //e.setValuesForKeys(dictionary)
-                    //print(e)
-                    //self.events.append(retrievedEvent)
+                if let dictionary = event.value as? [String: Any] {
+                    guard let id = dictionary["id"] as? String,
+                        let hostId = dictionary["hostId"] as? String,
+                        let hostThumbnail = dictionary["hostThumbnail"] as? String,
+                        let sport = dictionary["sport"] as? String,
+                        let title = dictionary["title"] as? String,
+                        let latitude = dictionary["latitude"] as? Double,
+                        let longitude = dictionary["longitude"] as? Double,
+                        let location = dictionary["location"] as? String,
+                        let startDate = dictionary["startDate"] as? Int,
+                        let endDate = dictionary["endDate"] as? Int,
+                        let maxPlayers = dictionary["maxPlayers"] as? Int
+                        else { return }
+
+                    let retrievedEvent = Event(id: id, hostId: hostId, hostThumbnail: hostThumbnail, sport: sport, title: title, latitude: latitude, longitude: longitude, location: location, startDate: startDate, endDate: endDate, maxPlayers: maxPlayers)
+
+
+                    self.events.append(retrievedEvent)
                 }
             }
 
@@ -54,7 +67,10 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! OnGoingCollectionViewCell
 
-        cell.configure(events[indexPath.row])
+        //cell.configure(events[indexPath.row])
+        let currentEvent = events[indexPath.row]
+
+        cell.configure(currentEvent)
 
         return cell
     }

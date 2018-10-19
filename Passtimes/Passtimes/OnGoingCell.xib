@@ -101,17 +101,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <connections>
-                <outlet property="cardView" destination="CQR-gi-T0I" id="OAD-aa-4sL"/>
-                <outlet property="cornerView" destination="NUj-nv-Geh" id="PoT-Vt-JeJ"/>
-                <outlet property="day" destination="VDO-9x-3dl" id="rLg-L6-SBv"/>
-                <outlet property="location" destination="ore-oA-nT3" id="eBr-09-SCt"/>
-                <outlet property="month" destination="vQI-Oz-it7" id="RoS-8d-VbO"/>
-                <outlet property="sport" destination="fJI-nA-1YP" id="iVb-qw-Opx"/>
-                <outlet property="time" destination="bJk-y7-Bjx" id="9hv-Yc-mSB"/>
-                <outlet property="title" destination="gef-pc-yb0" id="00f-e8-T9g"/>
-            </connections>
-            <point key="canvasLocation" x="53.600000000000001" y="35.082458770614693"/>
+            <point key="canvasLocation" x="53.600000000000001" y="34.632683658170919"/>
         </view>
     </objects>
 </document>

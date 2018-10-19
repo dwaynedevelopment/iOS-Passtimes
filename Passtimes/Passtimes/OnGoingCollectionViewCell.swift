@@ -17,7 +17,7 @@ class OnGoingCollectionViewCell: UICollectionViewCell {
     @IBOutlet var time: UILabel!
     @IBOutlet var month: UILabel!
     @IBOutlet var day: UILabel!
-    @IBOutlet var cornerView: UIView!
+    //@IBOutlet var cornerView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,8 +27,9 @@ class OnGoingCollectionViewCell: UICollectionViewCell {
         self.sport.text = event.sport
         self.title.text = event.title
         self.location.text = event.location
-        //self.month.text = CalendarUtils.getMonthFromDate(event.startDate!)
-        //self.day.text = CalendarUtils.getDayFromDate(event.startDate!)
+        self.month.text = CalendarUtils.getMonthFromDate(event.startDate)
+        self.day.text = CalendarUtils.getDayFromDate(event.startDate)
+        self.time.text = CalendarUtils.getTimeFromDate(event.startDate)
     }
 
 

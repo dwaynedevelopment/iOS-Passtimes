@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ILi-jV-pLp" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="16" y="218" width="343" height="45"/>
+                                <rect key="frame" x="16" y="218" width="343" height="30"/>
                                 <color key="tintColor" red="0.85098039219999999" green="0.23921568630000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -57,7 +57,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x9m-qz-y2l" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="16" y="279" width="343" height="45.5"/>
+                                <rect key="frame" x="16" y="264" width="343" height="30"/>
                                 <color key="tintColor" red="0.85098039219999999" green="0.23921568630000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -85,7 +85,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tG8-0e-56g">
-                                <rect key="frame" x="16" y="356.5" width="343" height="50"/>
+                                <rect key="frame" x="16" y="326" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.85098039219999999" green="0.23921568630000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SdR-r2-rpa"/>
@@ -120,11 +120,20 @@
                         <outlet property="emailEditText" destination="ILi-jV-pLp" id="lEU-bt-mhI"/>
                         <outlet property="logInButton" destination="tG8-0e-56g" id="SGG-rk-dCq"/>
                         <outlet property="passwordEditText" destination="x9m-qz-y2l" id="HYg-KX-R48"/>
+                        <segue destination="Ut1-5z-aKq" kind="show" identifier="toFeed" id="Eaq-4M-bFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="86"/>
+            <point key="canvasLocation" x="410" y="59"/>
+        </scene>
+        <!--TabManager-->
+        <scene sceneID="odd-Do-2D0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabManager" id="Ut1-5z-aKq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qz1-Vs-PiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="58"/>
         </scene>
     </scenes>
 </document>

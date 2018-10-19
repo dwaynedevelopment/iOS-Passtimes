@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         if (AuthUtils.isUserCurrentlySignedIn()) {
             if (AuthUtils.getCurrentSignedUser() != nil) {
                 SnackbarUtils.invokeSnackbar(message: AuthUtils.getCurrentSignedUser().getName + " is currently signed in.")
+                performSegue(withIdentifier: "toFeed", sender: self)
             }
         } else {
             
@@ -36,10 +37,19 @@ class LoginViewController: UIViewController {
         if let email = emailEditText.text, let password = passwordEditText.text {
             if AuthUtils.isEmailValid(email: email){
                 AuthUtils.authenticateSignInEmailAndPassword(email: email, password: password)
+                  performSegue(withIdentifier: "toFeed", sender: self)
             } else {
                 SnackbarUtils.invokeSnackbar(message: "One or more fields are incorrect.")
             }
         
+        }
+    }
+
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? FeedViewController {
+
         }
     }
     
