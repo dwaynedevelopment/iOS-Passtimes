@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		5419E3E56AAA5E847135BC11 /* Pods_Passtimes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C4FCF4F99EACFE94955B67 /* Pods_Passtimes.framework */; };
 		DF04FD3A2179E2DE004ED984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF04FD392179E2DE004ED984 /* AppDelegate.swift */; };
-		DF04FD3C2179E2DE004ED984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF04FD3B2179E2DE004ED984 /* ViewController.swift */; };
+		DF04FD3C2179E2DE004ED984 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF04FD3B2179E2DE004ED984 /* LoginViewController.swift */; };
 		DF04FD3F2179E2DE004ED984 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF04FD3D2179E2DE004ED984 /* Login.storyboard */; };
 		DF04FD412179E2DF004ED984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF04FD402179E2DF004ED984 /* Assets.xcassets */; };
 		DF04FD442179E2DF004ED984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF04FD422179E2DF004ED984 /* LaunchScreen.storyboard */; };
 		DF04FD4C2179E362004ED984 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF04FD4B2179E362004ED984 /* GoogleService-Info.plist */; };
+		DF04FD4E2179E674004ED984 /* kitten_swash.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF04FD4D2179E674004ED984 /* kitten_swash.ttf */; };
+		DF04FD502179E976004ED984 /* AuthUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF04FD4F2179E976004ED984 /* AuthUtils.swift */; };
+		DF04FD562179F4FE004ED984 /* ButtonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF04FD552179F4FE004ED984 /* ButtonUtils.swift */; };
+		DF04FD582179FC84004ED984 /* SnackBarUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF04FD572179FC84004ED984 /* SnackBarUtils.swift */; };
+		DF04FD5A2179FE1F004ED984 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF04FD592179FE1F004ED984 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +26,17 @@
 		DE138616472DEC606FEBD859 /* Pods-Passtimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passtimes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Passtimes/Pods-Passtimes.debug.xcconfig"; sourceTree = "<group>"; };
 		DF04FD362179E2DE004ED984 /* Passtimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passtimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF04FD392179E2DE004ED984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF04FD3B2179E2DE004ED984 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF04FD3B2179E2DE004ED984 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DF04FD3E2179E2DE004ED984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		DF04FD402179E2DF004ED984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF04FD432179E2DF004ED984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF04FD452179E2DF004ED984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF04FD4B2179E362004ED984 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DF04FD4D2179E674004ED984 /* kitten_swash.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kitten_swash.ttf; sourceTree = "<group>"; };
+		DF04FD4F2179E976004ED984 /* AuthUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUtils.swift; sourceTree = "<group>"; };
+		DF04FD552179F4FE004ED984 /* ButtonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUtils.swift; sourceTree = "<group>"; };
+		DF04FD572179FC84004ED984 /* SnackBarUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarUtils.swift; sourceTree = "<group>"; };
+		DF04FD592179FE1F004ED984 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F0C4FCF4F99EACFE94955B67 /* Pods_Passtimes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Passtimes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,12 +91,17 @@
 			isa = PBXGroup;
 			children = (
 				DF04FD392179E2DE004ED984 /* AppDelegate.swift */,
-				DF04FD3B2179E2DE004ED984 /* ViewController.swift */,
+				DF04FD3B2179E2DE004ED984 /* LoginViewController.swift */,
+				DF04FD4D2179E674004ED984 /* kitten_swash.ttf */,
 				DF04FD4B2179E362004ED984 /* GoogleService-Info.plist */,
 				DF04FD3D2179E2DE004ED984 /* Login.storyboard */,
 				DF04FD402179E2DF004ED984 /* Assets.xcassets */,
 				DF04FD422179E2DF004ED984 /* LaunchScreen.storyboard */,
 				DF04FD452179E2DF004ED984 /* Info.plist */,
+				DF04FD4F2179E976004ED984 /* AuthUtils.swift */,
+				DF04FD552179F4FE004ED984 /* ButtonUtils.swift */,
+				DF04FD572179FC84004ED984 /* SnackBarUtils.swift */,
+				DF04FD592179FE1F004ED984 /* Player.swift */,
 			);
 			path = Passtimes;
 			sourceTree = "<group>";
@@ -152,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF04FD442179E2DF004ED984 /* LaunchScreen.storyboard in Resources */,
+				DF04FD4E2179E674004ED984 /* kitten_swash.ttf in Resources */,
 				DF04FD4C2179E362004ED984 /* GoogleService-Info.plist in Resources */,
 				DF04FD412179E2DF004ED984 /* Assets.xcassets in Resources */,
 				DF04FD3F2179E2DE004ED984 /* Login.storyboard in Resources */,
@@ -171,7 +187,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Passtimes/Pods-Passtimes-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -180,7 +200,11 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -218,7 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF04FD3C2179E2DE004ED984 /* ViewController.swift in Sources */,
+				DF04FD582179FC84004ED984 /* SnackBarUtils.swift in Sources */,
+				DF04FD3C2179E2DE004ED984 /* LoginViewController.swift in Sources */,
+				DF04FD562179F4FE004ED984 /* ButtonUtils.swift in Sources */,
+				DF04FD502179E976004ED984 /* AuthUtils.swift in Sources */,
+				DF04FD5A2179FE1F004ED984 /* Player.swift in Sources */,
 				DF04FD3A2179E2DE004ED984 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
