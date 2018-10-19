@@ -1,0 +1,6 @@
+framework module Pods_Passtimes {
+  umbrella header "Pods-Passtimes-umbrella.h"
+
+  export *
+  module * { export * }
+}
