@@ -66,6 +66,7 @@ PODS:
   - GoogleUtilities/UserDefaults (5.3.3):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.0)
+  - Kingfisher (4.10.0)
   - leveldb-library (1.20)
   - MaterialComponents/AnimationTiming (67.1.0)
   - MaterialComponents/Buttons (67.1.0):
@@ -117,6 +118,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - Kingfisher (~> 4.0)
   - MaterialComponents/Snackbar
   - SkyFloatingLabelTextField (~> 3.0)
 
@@ -133,6 +135,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
+    - Kingfisher
     - leveldb-library
     - MaterialComponents
     - MDFInternationalization
@@ -152,6 +155,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 2b3a023a61239c8d002e6e4fcf4abce8eddce0e0
   GoogleUtilities: 8208aee3e97a1ae93d44c57e96c476a5a3b03f0a
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   MaterialComponents: 54a3d649dc4072345c891089ad097d94e576a8b0
   MDFInternationalization: b5b8626628abf026e630e5ebaeee563037712cbb
@@ -159,6 +163,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
 
-PODFILE CHECKSUM: 39313e9c80dcef1095e6fd3f234ac24d0ce779ad
+PODFILE CHECKSUM: a9f5530b9823e9fd7e96326b183e7ce554ccae0c
 
 COCOAPODS: 1.5.3

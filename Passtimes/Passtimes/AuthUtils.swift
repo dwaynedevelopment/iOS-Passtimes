@@ -15,7 +15,6 @@ class AuthUtils {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if (error == nil) {
                 guard user != nil else { return }
-//                SnackbarUtils.invokeSnackbar(message: user?.user.email ?? "default@gmail.com")
                 let player = getCurrentSignedUser()
             } else {
                 SnackbarUtils.invokeSnackbar(message: error!.localizedDescription)
@@ -24,7 +23,7 @@ class AuthUtils {
     }
     
     public static func getCurrentSignedUser() -> Player {
-        return Player(id: Auth.auth().currentUser?.uid ?? "uuid", name: Auth.auth().currentUser?.email ?? "default@gmail.com", thumbnail: Auth.auth().currentUser?.photoURL?.absoluteString ?? "thumbnailUrl")
+        return Player(id: Auth.auth().currentUser?.uid ?? "uuid", name: Auth.auth().currentUser?.displayName ?? "default", thumbnail: Auth.auth().currentUser?.photoURL?.absoluteString ?? "thumbnailUrl")
     }
     
     public static func isUserCurrentlySignedIn() -> Bool {
