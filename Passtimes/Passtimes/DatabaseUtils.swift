@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import FirebaseDatabase
+import FirebaseFirestore
 
 class DatabaseUtils {
 
-    private let db: Database!
+    private let db: Firestore!
 
     // Get class Instance
     class var sharedInstance: DatabaseUtils {
@@ -22,11 +22,13 @@ class DatabaseUtils {
     }
 
     private init() {
-        db = Database.database()
+        db = Firestore.firestore()
     }
 
-    public func reference() -> DatabaseReference {
-        return db.reference()
+    public func reference(to collectionReference: String) -> CollectionReference {
+        return db.collection(collectionReference)
     }
+
+    
 
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import FirebaseFirestore
 
 class FeedViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -24,14 +24,18 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
         //self.onGoingCollectionView.register(UINib(nibName: "OnGoingCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         // Do any additional setup after loading the view.
-
         db = DatabaseUtils.sharedInstance
-        db.reference().child("events").observe(.value, with: {(snapshot) in
+        db.reference(to: "events").addSnapshotListener { (snapshot, error) in
+            if error != nil {
+                print("Error")
+                return
+            }
             self.events.removeAll()
 
-            for event in snapshot.children.allObjects as! [DataSnapshot] {
+            guard let snapshot = snapshot else { return }
 
-                if let dictionary = event.value as? [String: Any] {
+            for document in snapshot.documents {
+                if let dictionary = document.data() as? [String: Any] {
                     guard let id = dictionary["id"] as? String,
                         let hostId = dictionary["hostId"] as? String,
                         let hostThumbnail = dictionary["hostThumbnail"] as? String,
@@ -47,13 +51,11 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
                     let retrievedEvent = Event(id: id, hostId: hostId, hostThumbnail: hostThumbnail, sport: sport, title: title, latitude: latitude, longitude: longitude, location: location, startDate: startDate, endDate: endDate, maxPlayers: maxPlayers)
 
-
                     self.events.append(retrievedEvent)
                 }
             }
-
             self.onGoingCollectionView.reloadData()
-        })
+        }
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -73,6 +75,16 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.configure(currentEvent)
 
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetailView", sender: indexPath)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = sender as? IndexPath, let destination = segue.destination as? DetailViewController {
+            destination.eventId = events[indexPath.row].id
+        }
     }
 
 

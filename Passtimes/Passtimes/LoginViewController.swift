@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Round corners for buttons, helper class.
-        
+        // Round corners for buttons, helper class
+
         ButtonUtils.roundedButtonMapper(button: logInButton)
         if (AuthUtils.isUserCurrentlySignedIn()) {
             if (AuthUtils.getCurrentSignedUser() != nil) {
@@ -33,7 +33,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginEventListener(_ sender: UIButton) {
-        
         if let email = emailEditText.text, let password = passwordEditText.text {
             if AuthUtils.isEmailValid(email: email){
                 AuthUtils.authenticateSignInEmailAndPassword(email: email, password: password)

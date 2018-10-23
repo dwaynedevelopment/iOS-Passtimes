@@ -8,11 +8,12 @@ target 'Passtimes' do
   # Pods for Passtimes
 
 pod 'Firebase/Core'
-pod 'Firebase/Database'
+pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'MaterialComponents/Snackbar'
 pod 'Kingfisher', '~> 4.0'
+pod 'FSCalendar'
 
 end

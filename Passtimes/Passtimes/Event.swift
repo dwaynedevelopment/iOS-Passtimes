@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 enum ParsingError: Error {
     case Event
@@ -25,6 +26,7 @@ class Event {
     let startDate: Int
     let endDate: Int
     let maxPlayers: Int
+    let attendees: [DocumentReference]
 
 //    init(dictionary: [String: Any]) throws {
 //        guard let id = dictionary["id"] as? String,
@@ -65,6 +67,7 @@ class Event {
         self.startDate = startDate
         self.endDate = endDate
         self.maxPlayers = maxPlayers
+        self.attendees = []
     }
 
 

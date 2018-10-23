@@ -31,4 +31,19 @@ class CalendarUtils {
         return dateFormatter.string(from: date)
     }
 
+    public static func getStartEndTimefromDate(startTime startMillis: Int, endTime endMillis: Int) -> String {
+        let dateFormatter = DateFormatter()
+        let startDate = Date(timeIntervalSince1970: (Double)(startMillis / 1000))
+        let endDate = Date(timeIntervalSince1970: (Double)(endMillis / 1000))
+        dateFormatter.dateFormat = "hh:mm aa"
+
+        return dateFormatter.string(from: startDate) + " - " + dateFormatter.string(from: endDate)
+    }
+
+    public static func composeDate(hours: Int, minutes: Int) -> Date {
+
+
+        return Date()
+    }
+
 }
