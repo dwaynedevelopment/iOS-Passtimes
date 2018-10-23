@@ -46,7 +46,7 @@ class DetailViewController: UIViewController {
                         let maxPlayers = dictionary["maxPlayers"] as? Int
                         else { return }
 
-                    let retrievedEvent = Event(id: id, hostId: hostId, hostThumbnail: hostThumbnail, sport: sport, title: title, latitude: latitude, longitude: longitude, location: location, startDate: startDate, endDate: endDate, maxPlayers: maxPlayers)
+                    let retrievedEvent = Event(id: id, hostId: hostId, hostThumbnail: hostThumbnail, sport: sport, title: title, latitude: latitude, longitude: longitude, location: location, startDate: startDate, endDate: endDate, maxPlayers: maxPlayers, attendingUsers: [])
 
                     let url = URL(string: retrievedEvent.hostThumbnail)
                     self.hostImage.layer.masksToBounds = false

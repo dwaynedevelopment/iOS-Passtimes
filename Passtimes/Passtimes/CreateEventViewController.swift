@@ -99,36 +99,37 @@ class CreateEventViewController: UIViewController, UICollectionViewDelegate, UIC
     }
 
     @IBAction func createEvent(_ sender: Any) {
-//        if let eventTitle = eventTitle.text, !eventTitle.isEmpty,
-//            let location = location.text, !location.isEmpty,
-//            let startTime = startTime.text, !startTime.isEmpty,
-//            let endTime = endTime.text, !endTime.isEmpty,
-//            sportSelected {
-//            // TODO: Save to database
-//            let player = AuthUtils.getCurrentSignedUser()
-//
-//            let event = Event(id: UUID.init().uuidString, hostId: player.getId, hostThumbnail: player.getThumbnail, sport: sports[previousIndexPath.row].name, title: eventTitle, latitude: 1.0, longitude: 1.0, location: location, startDate: 1540275514111, endDate: 1540275514111, maxPlayers: 5)
-//
-//            let dict: [String: Any] = ["id" : event.id,
-//                                       "hostId" : event.hostId,
-//                                       "hostThumbnail" : event.hostThumbnail,
-//                                       "sport" : event.sport,
-//                                       "title" : event.title,
-//                                       "latitude" : event.latitude,
-//                                       "longitud" : event.longitude,
-//                                       "location" : event.location,
-//                                       "startDate" : event.startDate,
-//                                       "endDate" : event.endDate,
-//                                       "maxPlayers" : event.maxPlayers]
-//
-//            db.reference(to: "events").document(event.id).setData(dict) { (error) in
-//                if error != nil {
-//                    return
-//                }
-//
-//                self.dismiss(animated: true, completion: nil)
-//            }
-//        }
+        if let eventTitle = eventTitle.text, !eventTitle.isEmpty,
+            let location = location.text, !location.isEmpty,
+            let startTime = startTime.text, !startTime.isEmpty,
+            let endTime = endTime.text, !endTime.isEmpty,
+            sportSelected {
+            // TODO: Save to database
+            let player = AuthUtils.getCurrentSignedUser()
+
+            let event = Event(id: UUID.init().uuidString, hostId: player.getId, hostThumbnail: player.getThumbnail, sport: sports[previousIndexPath.row].name, title: eventTitle, latitude: 1.1, longitude: 1.1, location: location, startDate: 1540738856448, endDate: 1540738856448, maxPlayers: 5, attendingUsers: [])
+
+            let dict: [String: Any] = ["id" : event.id,
+                                       "hostId" : event.hostId,
+                                       "hostThumbnail" : event.hostThumbnail,
+                                       "sport" : event.sport,
+                                       "title" : event.title,
+                                       "latitude" : event.latitude,
+                                       "longitude" : event.longitude,
+                                       "location" : event.location,
+                                       "startDate" : event.startDate,
+                                       "endDate" : event.endDate,
+                                       "maxPlayers" : event.maxPlayers,
+                                       "attendingUsers" : event.attendingUsers]
+
+            db.reference(to: "events").document(event.id).setData(dict) { (error) in
+                if error != nil {
+                    return
+                }
+
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func cancelEventCreation(_ sender: Any) {

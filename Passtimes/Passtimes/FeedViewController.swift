@@ -30,6 +30,7 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 print("Error")
                 return
             }
+
             self.events.removeAll()
 
             guard let snapshot = snapshot else { return }
@@ -49,13 +50,23 @@ class FeedViewController: UIViewController, UICollectionViewDelegate, UICollecti
                         let maxPlayers = dictionary["maxPlayers"] as? Int
                         else { return }
 
-                    let retrievedEvent = Event(id: id, hostId: hostId, hostThumbnail: hostThumbnail, sport: sport, title: title, latitude: latitude, longitude: longitude, location: location, startDate: startDate, endDate: endDate, maxPlayers: maxPlayers)
+                    var retrievedEvent: Event?
 
-                    self.events.append(retrievedEvent)
+                    if let attendingUsers = dictionary["attendingUsers"] as? [DocumentReference] {
+                        retrievedEvent = Event(id: id, hostId: hostId, hostThumbnail: hostThumbnail, sport: sport, title: title, latitude: latitude, longitude: longitude, location: location, startDate: startDate, endDate: endDate, maxPlayers: maxPlayers, attendingUsers: [])
+                    } else {
+                        retrievedEvent = Event(id: id, hostId: hostId, hostThumbnail: hostThumbnail, sport: sport, title: title, latitude: latitude, longitude: longitude, location: location, startDate: startDate, endDate: endDate, maxPlayers: maxPlayers, attendingUsers: [])
+                    }
+
+                    self.events.append(retrievedEvent!)
                 }
             }
             self.onGoingCollectionView.reloadData()
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.onGoingCollectionView.reloadData()
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {

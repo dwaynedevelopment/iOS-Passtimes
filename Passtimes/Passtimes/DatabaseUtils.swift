@@ -23,6 +23,9 @@ class DatabaseUtils {
 
     private init() {
         db = Firestore.firestore()
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
     }
 
     public func reference(to collectionReference: String) -> CollectionReference {

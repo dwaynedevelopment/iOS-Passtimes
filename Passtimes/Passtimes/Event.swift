@@ -26,7 +26,7 @@ class Event {
     let startDate: Int
     let endDate: Int
     let maxPlayers: Int
-    let attendees: [DocumentReference]
+    let attendingUsers: [DocumentReference]? = nil
 
 //    init(dictionary: [String: Any]) throws {
 //        guard let id = dictionary["id"] as? String,
@@ -55,7 +55,7 @@ class Event {
 //        self.maxPlayers = maxPlayers
 //    }
 
-    init(id: String, hostId: String, hostThumbnail: String, sport: String, title:String, latitude: Double, longitude: Double, location: String, startDate: Int, endDate: Int, maxPlayers: Int) {
+    init(id: String, hostId: String, hostThumbnail: String, sport: String, title:String, latitude: Double, longitude: Double, location: String, startDate: Int, endDate: Int, maxPlayers: Int, attendingUsers: [DocumentReference]) {
         self.id = id
         self.hostId = hostId
         self.hostThumbnail = hostThumbnail
@@ -67,7 +67,7 @@ class Event {
         self.startDate = startDate
         self.endDate = endDate
         self.maxPlayers = maxPlayers
-        self.attendees = []
+        //self.attendingUsers = attendingUsers
     }
 
 

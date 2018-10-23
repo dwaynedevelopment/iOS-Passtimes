@@ -478,7 +478,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1XU-fO-HUf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Passtimes" id="LlP-W3-l49"/>
+                    <navigationItem key="navigationItem" title="Passtimes" id="LlP-W3-l49">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="xLU-7b-W1v">
+                            <connections>
+                                <segue destination="Nuj-GS-1W0" kind="popoverPresentation" popoverAnchorBarButtonItem="xLU-7b-W1v" id="zRY-0t-aNl">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="onGoingCollectionView" destination="aU2-6R-gfR" id="tt8-R6-Wdy"/>
                         <segue destination="B1J-SM-adi" kind="show" identifier="toDetailView" id="aCO-Nn-rB2"/>
